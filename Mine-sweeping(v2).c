@@ -7,10 +7,11 @@
 #define M 8
 #define N 6
 #define NUM 10
-int square[M][N]={0};
+int square[M][N]={0};//雷田场地
 int check(int,int);
 int checkpoint(int,int);
 void output(void);
+
 int main(void)
 {
 	int i,m,n,x,y;
@@ -136,6 +137,7 @@ int main(void)
 			return 0;
 	}
 }
+
 int checkpoint(int m,int n)//检测该点是否有雷
 {
 	if(m<0||m>M-1||n<0||n>N-1)
@@ -145,6 +147,7 @@ int checkpoint(int m,int n)//检测该点是否有雷
 	else
 		return 0;//无雷
 }
+
 int check(int m,int n)//检测该点
 	//其中有雷的值为50，检测过的点值为48
 {
@@ -178,6 +181,7 @@ int check(int m,int n)//检测该点
 	    }
 	return 1;
 }
+
 void output(void)
 {
 	int checksum,m,n;
